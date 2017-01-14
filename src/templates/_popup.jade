@@ -1,0 +1,15 @@
+.popup#callback
+  .popup__inner
+    button.popup__close(type="button") X
+
+    form.form#callback-form(method="post" name="callback", novalidate)
+      a(href="").form__logo
+        img(src="img/logo.svg", alt="")
+      .field
+        label.field__label(for="callback_name") Введите имя<sup>*</sup>
+        input.input(type="text", name="custom_U5736", id="callback_name", required)
+      .field
+        label.field__label(for="callback_phone") Введите телефон<sup>*</sup>
+        input.input(type="tel", name="custom_U5746", id="callback_phone", required)
+      button.btn.btn--transp.btn--bigborder(type="submit")
+        | Отправить

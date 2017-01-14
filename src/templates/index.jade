@@ -1,0 +1,301 @@
+---
+title: Ремонт коттеджей
+---
+extends layouts/_layout
+block content
+  header.site-header
+    .container
+      .row
+        .col-xs-12.col-sm-3
+          .site-header__logo
+            a(href="/")
+              img(src="img/logo.svg", alt="artist")
+        .col-xs-6.col-sm-3
+          .site-header__exp
+              span.site-header__exp-num 15
+              span.site-header__exp-orange лет опыта
+              br
+              span.site-header__exp-orange в дизайне
+        .col-xs-6.col-sm-3
+          .site-header__exp
+              span.site-header__exp-num 89
+              span.site-header__exp-orange готовых
+              br
+              span.site-header__exp-orange проектов
+        .col-xs-12.col-sm-3
+          .site-header__cta.text-center
+            .row
+              a.col-xs-12(href="tel:+77772375042") +7 (777) 237 50 42
+              .col-xs-12
+                button.btn.btn--transp(type='button' data-popup="#callback") обратный звонок
+  .hero
+    .top-links
+      .container
+        .row
+          ul
+            li.top-links__item.col-md-4
+              a(href="") ДИЗАЙН СТУДИЯ
+            li.top-links__item.col-md-4
+              a(href="") ремонт квартир
+            li.top-links__item.top-links__item--active.col-md-4
+              a(href="") ремонт коттеджей
+    .container
+      .hero__slogan
+        h1.hero__title РЕМОНТ КОТТЕДЖЕЙ И ЗАГОРОДНЫХ
+        h1.hero__title ДОМОВ В АЛМАТЫ
+      .hero__cta
+        p
+          | Оставьте заявку сейчас и
+          br
+          | получите&nbsp;
+          span бесплатную консультацию
+          br
+          | от  профессионального дизайнера
+      .hero__form
+        form#form-header(method="post")
+          input(type="tel" placeholder="Введите ваш телефон" name="custom_U5746")
+          input(type="submit", value="Выезд технолога" onclick="yaCounter38372210.reachGoal('submit1'); return true;")
+  section.section.section--caps
+    .container
+      h1.section__title
+        span НАШИ&nbsp;
+        |  возможности
+      -var caps = ['Утепление стен', 'Капитальный ремонт фасада', 'Облицовка камнем', 'Ремонт крыши', 'Ландшафтные работы', 'Декор изделия из фибробетона', 'Реконструкция фасада', 'Монтаж водостоков', 'Освещение участка', 'Дизайн интерьера', 'Дизайн фасада', 'Внутренняя отделка']
+      .row
+        -for (var i = 1; i <= 4; i++)
+          .col-xs-12.col-sm-6.col-md-3.text-center.cap
+            div
+              img(src="img/cap#{i}.png", alt="")
+            p #{caps[i - 1]}
+      .row
+        -for (var i = 5; i <= 8; i++)
+          .col-xs-12.col-sm-6.col-md-3.text-center.cap
+            div
+              img(src="img/cap#{i}.png", alt="")
+            p #{caps[i - 1]}
+      .row
+          -for (var i = 9; i <= 12; i++)
+            .col-xs-12.col-sm-6.col-md-3.text-center.cap
+              div
+                img(src="img/cap#{i}.png", alt="")
+              p #{caps[i - 1]}
+
+  section.section.section--portfolio
+    .container
+      h1.section__title
+        span выполненные&nbsp;
+        | проекты
+      .main-slider
+        .main-slider__in
+          .row
+            .main-slider__left.col-md-7
+              .main-slider__img
+                img(src="img/slider-img1.jpg", alt="")
+                img(src="img/slider-img2.jpg", alt="")
+                img(src="img/slider-img3.jpg", alt="")
+                img(src="img/slider-img4.jpg", alt="")
+              .main-slider__sync
+                img(src="img/slider-img1.jpg", alt="")
+                img(src="img/slider-img2.jpg", alt="")
+                img(src="img/slider-img3.jpg", alt="")
+                img(src="img/slider-img4.jpg", alt="")
+            .main-slider__right.col-md-5
+              h1
+                | Реконструкция офисного здания
+                address ул. Желтоксан, д. 2
+              span
+                | Площадь: 2500м2
+                br
+                | Срок реализации: 86 дней.
+              hr.main-slider__right-hr
+              .main-slider__text
+                p В оформлении квартиры дома постройке 60-х годов дизайнер Зверев Дмитрий использовал нестандартный подход:  в основной комнате разместили системы хранения, место для готовки, стол на четыре персоны, зону отдыха и рабочее место. Для стен выбрали белый цвет, акцентами стала старинная кладка кирпича сохранившаяся под толстым слоем штукатурки, на пол положили...&nbsp;
+                  a(href="#") читать далее >>
+              button.btn.btn--transp.btn--bigborder(type="button" data-popup="#callback") Хочу так же
+
+  section.section.section--price
+    .container
+      h1.section__title
+        span Стоимость&nbsp;&nbsp;
+        | отделки коттеджей
+      .price-cards
+        .row.row-no-padding
+          .price-cards__item.col-xs-4
+            .price-cards__in
+              header.price-cards__header
+                h1 Стандартный ремонт
+              span.price-cards__price от 24 100 тг./м2
+              .price-cards__border
+                p.price-cards__text.
+                  Данный вид ремонта является капитальным, с монтажом (заменой) инженерных сетей (электрики и сантехники), с выравниванием всех стен, полов и потолков, но сприменением более дешевых материалов (обои, краска, ламинат, плитка и т.п.). Как правило, выполняется без дизайн-проекта.
+                span.price-cards__price--plus + 13 900 тг./м2
+              small (стоимость черновых материалов)
+            button.btn.btn--transp.btn--bigborder(type='button' data-popup="#callback") Заказать консультацию
+          .price-cards__item.col-xs-4
+            .price-cards__in
+              header.price-cards__header
+                h1 Ремонт бизнес-класса
+              span.price-cards__price от 34 600 тг./м2
+              .price-cards__border
+                p.price-cards__text.
+                  Данный вид ремонта выполняется по индивидуальному дизайн
+                  проекту с выравниванием всех поверхностей в ноль и с
+                  использованием более дорогих материалов и технологий
+                  (декоративная штукатурка, многокомпонентная краска,
+                  паркетная или массивная доска, многоуровневые гипсокартоновые потолки и т.п.)
+                span.price-cards__price--plus + 25 500 тг./м2
+              small (стоимость черновых материалов)
+            button.btn.btn--transp.btn--bigborder(type='button' data-popup="#callback") Заказать консультацию
+          .price-cards__item.col-xs-4
+            .price-cards__in
+              header.price-cards__header
+                h1 Эксклюзивный ремонт
+              span.price-cards__price от 42 700тг./м2
+              .price-cards__border
+                p.price-cards__text.
+                  Данный вид ремонта выполняется по детальному дизайн-проекту с подбором, материалов мебели и
+                  авторским надзором, с примене нием дорогих эксклюзивных
+                  материалов и технологий (венецианская штукатурка с
+                  имитацией отделки мрамором и малахитом, штучный художествен
+                  ный паркет, витражи, кованые изделия, лепнина из гипса и т.п.).
+                span.price-cards__price--plus + 39 000 тг./м2
+              small (стоимость черновых материалов)
+            button.btn.btn--transp.btn--bigborder(type='button' data-popup="#callback") Заказать консультацию
+  section.section.section--calc
+    .container
+      h1.section__title
+        | Рассчитать&nbsp;&nbsp;
+        span стоимость ремонта
+      .row
+        .calc.col-xs-12.col-lg-10.col-lg-offset-1
+          .calc__in
+            iframe.actAsDiv#iFrame1(src="./calc_work_min" name="iFrame1" scrolling="no" frameborder="0" width="100%")
+  section.section.section--why
+    .container
+      h1.section__title почему мы?
+      .why
+        ul.why-items.why-items--left
+          li Более 15 лет опыта
+          li Страхование объектов
+          li Гарантия 2 года
+        .hexagon
+          img(src="img/why-img.png", alt="")
+          img(src="img/why-lines.png", alt="" class="why__lines")
+        ul.why-items.why-items--right
+          li Официальный договор
+          li Оплата работ по факту
+          li Большое портфолио
+  section.section.section--start
+    .container
+      h1.section__title С чего начать?
+      .steps
+        h2.steps__info ВЫЗОВ СМЕТЧИКА И РАСЧЕТ СМЕТЫ
+        .steps__one
+          h1.steps__title Вызов сметчика
+          p.steps__text
+            |Для расчета детальной сметы на ремонтно-отделочные работы
+            |и графика производства работ необходимо
+            |вызвать нашего сметчика на объект, чтобы он&nbsp;
+            a(href="") читать далее >>
+          p.steps__desc Выезд специалиста и расчета сметы бесплатно.
+        .steps__two
+          h1.steps__title Заключение договора
+          p.steps__text
+            |После выезда мы вышлем Вам договор со всеми приложениями
+            |на электронную почту. При желании заказчика, до заключения
+            |договора, все его пункты подлежат&nbsp;
+            a(href="") читать далее >>
+        .steps__three
+          h1.steps__title Ремонт помещения
+          p.steps__text
+            | После согласования договора переходим к ремонту помещения и,
+            | если необходимо, к разработке инженерных проектов.
+          p.steps__desc Срок: 1-2 дня
+        h2.steps__info ВЫПОЛНЕНИЕ РЕМОНТНО-СТРОИТЕЛЬНЫХ РАБОТ
+      .steps__bottom
+        p
+          |Необходимо заключить договор подряда на ремонтно-строительные работы.
+          |Размер и порядок оплаты общестроительных («черновых») материалов определяется индивидуальными условиями, прописанными в договоре.Чаще всего это аванс 250'000 тенге, оставшаяся сумма в течение определенного времени. Оплата выполненных работ осуществляется по факту их выполнения.
+        div.text-center
+          button.btn.btn--transp.btn--bigborder(type='button' data-popup="#callback") узнать подробнее
+  section.section.section--tour
+    .container
+      h1.section__title Экскурсия по строящимся объектам
+      .row.tour
+        .col-md-7
+          h2.tour__title
+            | Поездка с экспертами нашей компании,
+            br
+            strong дает возможность:
+          ul.tour__list
+            li Ознакомиться с технологиями наших профессионалов.
+            li Оценить высокое качество ремонтно-строительных работ.
+            li Получить полное и детальное представление об уровне цен и конкурентных преимуществах нашей компании.
+            li Лучше один раз увидеть, чем 5 раз услышать!
+            li Нам нечего скрывать, мы гордимся результатами своего труда.
+          button.btn.btn--transp.btn--bigborder(type='button' data-popup="#callback") составить смету
+        .col-xs-12.col-md-5.pull-right
+          form.tour__form(action="scripts/form-u5734.php" method="post")
+            div
+              label(for="name") Введите имя *
+              input(type="text" id="name" name="custom_U5736")
+            div
+              label(for="tel") Введите телефон *
+              input(type="tel" id="tel" name="custom_U5746")
+            div
+              button.btn.btn--transp.btn--bigborder(type="submit") заказать звонок
+  section.section.section--social
+    .container
+      .row
+        .widget-wrap
+          script(src="//vk.com/js/api/openapi.js?121")
+          div#vk_groups.text-center.center-block
+          script.
+            VK.Widgets.Group("vk_groups", {mode: 2, width: "auto", height: "500"}, 61542506);
+  footer.site-footer
+    .container
+      .row
+        .col-md-4
+          .site-footer__logo
+              a(href="/")
+                img(src="img/logo.svg", alt="artist")
+        .col-xs-12.col-md-5.site-footer__contacts.pull-right.text-right
+          p
+            | Телефон:&nbsp;
+            a(href="tel:+77772375042") +7 (777) 237 50 42
+          p
+            |  Электронный адрес:&nbsp;
+            a(href="mailto:info@shop-site.ru") info@shop-site.ru
+
+  include _popup
+  .banner
+    .popup_close_banner(onclick='closeBanner();')
+      span
+    .wrapp
+      .baner-flex
+        div
+          img.baner-img(src='banner-podpiska/img/error_v_remonte.jpg', alt='Ошибки в ремонте')
+          h2.banner-h2
+            | Оставьте свою почту
+            br
+            | и узнайте
+            span 10 типичных ошибок
+            br
+            | при ремонте квартиры.
+        div(style='margin-right: 100px;')
+          #subscr-block-5247.jc_subblock_0.jc_subblocktexture_0
+            form(action='banner-podpiska/banner_send.php', method='post', enctype='multipart/form-data')
+              label(for='')
+                .desc Введите E-mail:
+                input#applicationTelephone_2(name='email', type='email', maxlength='30', required)
+              input.button-js.form-submit.jc_compile_btn.small.black-smooth-gradient(type='submit', name='banner', data-name='banner', data-forname='Получите 10 бизнес-кейсов', style='color:#fff', value='Получить!', onclick="yaCounter38372210.reachGoal('submit_subscriber'); return true;")
+              script.
+                function closeBanner(){
+                $('.banner').hide();
+                }
+
+
+
+
+
+
