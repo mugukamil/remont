@@ -6615,16 +6615,34 @@ body {
 .main-slider__sync .slick-current {
   border: 1px solid #ffb400;
   padding: 5px;
-  width: 203px;
+  width: 190px !important;
   height: 181px;
   opacity: 0.58;
 }
 
+.main-slider__sync .slick-track {
+  max-width: 730px !important;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+
 .main-slider__sync img {
-  width: 193px;
+  width: 190px !important;
   height: 169px;
   object-fit: cover;
-  margin-right: 25px;
+}
+
+.main-slider__sync img + img {
+  margin-left: 20px;
+}
+
+.main-slider__sync img:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.main-slider__sync img:nth-child(n+4) {
+  margin-top: 10px;
 }
 
 .main-slider__right h1 {
@@ -7179,6 +7197,14 @@ body {
 .widget-wrap {
   width: 400px;
   margin: 0 auto;
+}
+
+.morecontent span {
+  display: none;
+}
+
+.morelink {
+  display: inline-block;
 }
 
 @media (min-width: 768px){
@@ -8004,6 +8030,20 @@ body {
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1199px){
+  .main-slider__sync .slick-current{
+    width: 150px !important;
+    height: 160px;
+  }
+  .main-slider__sync .slick-track{
+    max-width: 550px !important;
+  }
+  .main-slider__sync img{
+    width: 150px !important;
+    height: 160px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px){
   .visible-sm{
     display: block !important;
@@ -8108,9 +8148,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 690px){
+@media only screen and (max-width: 560px){
   .section__title{
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
@@ -8210,9 +8250,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 560px){
-  .section__title{
-    font-size: 32px;
+@media only screen and (max-width: 700px){
+  .section--calc .section__title{
+    font-size: 50px;
   }
 }
 
@@ -8295,50 +8335,6 @@ body {
     text-align: center;
     float: none;
     margin-top: 50px;
-  }
-}
-
-@media only screen and (max-width: 767px){
-  .site-header__logo{
-    margin-bottom: 20px;
-  }
-  .site-header__cta{
-    margin-top: 20px;
-    padding-bottom: 20px;
-  }
-  .cap + .cap{
-    margin-top: 40px;
-  }
-  .main-slider__in{
-    padding-top: 30px;
-    padding-left: 20px;
-  }
-  .calc__in{
-    padding: 0;
-    border: none;
-  }
-  .steps__info{
-    font-size: 26px;
-  }
-  .steps__title{
-    font-size: 30px;
-  }
-  .steps__text{
-    font-size: 16px;
-  }
-  .steps__one, .steps__three{
-    padding-left: 0px;
-    border-left: 0;
-  }
-  .steps__one:before, .steps__three:before{
-    display: none;
-  }
-  .steps__two{
-    text-align: left;
-    border-right: none;
-  }
-  .steps__two:after{
-    display: none;
   }
 }
 
@@ -8431,6 +8427,50 @@ body {
   }
 }
 
+@media only screen and (max-width: 767px){
+  .site-header__logo{
+    margin-bottom: 20px;
+  }
+  .site-header__cta{
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .cap + .cap{
+    margin-top: 40px;
+  }
+  .main-slider__in{
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  .calc__in{
+    padding: 0;
+    border: none;
+  }
+  .steps__info{
+    font-size: 26px;
+  }
+  .steps__title{
+    font-size: 30px;
+  }
+  .steps__text{
+    font-size: 16px;
+  }
+  .steps__one, .steps__three{
+    padding-left: 0px;
+    border-left: 0;
+  }
+  .steps__one:before, .steps__three:before{
+    display: none;
+  }
+  .steps__two{
+    text-align: left;
+    border-right: none;
+  }
+  .steps__two:after{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px){
   .table-responsive{
     width: 100%;
@@ -8502,66 +8542,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 700px){
-  .section--calc .section__title{
-    font-size: 50px;
+@media only screen and (max-width: 690px){
+  .section__title{
+    font-size: 40px;
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0){
-  input[type="date"].form-control,
-  input[type="time"].form-control,
-  input[type="datetime-local"].form-control,
-  input[type="month"].form-control{
-    line-height: 34px;
-  }
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
-  .input-group-sm > input[type="date"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="date"].btn,
-  .input-group-sm input[type="date"],
-  input[type="time"].input-sm,
-  .input-group-sm > input[type="time"].form-control,
-  .input-group-sm > input[type="time"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="time"].btn,
-  .input-group-sm
-  input[type="time"],
-  input[type="datetime-local"].input-sm,
-  .input-group-sm > input[type="datetime-local"].form-control,
-  .input-group-sm > input[type="datetime-local"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
-  .input-group-sm
-  input[type="datetime-local"],
-  input[type="month"].input-sm,
-  .input-group-sm > input[type="month"].form-control,
-  .input-group-sm > input[type="month"].input-group-addon,
-  .input-group-sm > .input-group-btn > input[type="month"].btn,
-  .input-group-sm
-  input[type="month"]{
-    line-height: 30px;
-  }
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
-  .input-group-lg > input[type="date"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="date"].btn,
-  .input-group-lg input[type="date"],
-  input[type="time"].input-lg,
-  .input-group-lg > input[type="time"].form-control,
-  .input-group-lg > input[type="time"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="time"].btn,
-  .input-group-lg
-  input[type="time"],
-  input[type="datetime-local"].input-lg,
-  .input-group-lg > input[type="datetime-local"].form-control,
-  .input-group-lg > input[type="datetime-local"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
-  .input-group-lg
-  input[type="datetime-local"],
-  input[type="month"].input-lg,
-  .input-group-lg > input[type="month"].form-control,
-  .input-group-lg > input[type="month"].input-group-addon,
-  .input-group-lg > .input-group-btn > input[type="month"].btn,
-  .input-group-lg
-  input[type="month"]{
-    line-height: 46px;
+@media only screen and (max-width: 680px){
+  .hero__form{
+    padding-bottom: 100px;
   }
 }
 
@@ -8569,12 +8558,6 @@ body {
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse{
     max-height: 200px;
-  }
-}
-
-@media only screen and (max-width: 680px){
-  .hero__form{
-    padding-bottom: 100px;
   }
 }
 
@@ -8637,6 +8620,63 @@ body {
     font-size: 12px;
     padding-left: 5px;
     padding-right: 5px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0){
+  input[type="date"].form-control,
+  input[type="time"].form-control,
+  input[type="datetime-local"].form-control,
+  input[type="month"].form-control{
+    line-height: 34px;
+  }
+  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
+  .input-group-sm > input[type="date"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="date"].btn,
+  .input-group-sm input[type="date"],
+  input[type="time"].input-sm,
+  .input-group-sm > input[type="time"].form-control,
+  .input-group-sm > input[type="time"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="time"].btn,
+  .input-group-sm
+  input[type="time"],
+  input[type="datetime-local"].input-sm,
+  .input-group-sm > input[type="datetime-local"].form-control,
+  .input-group-sm > input[type="datetime-local"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
+  .input-group-sm
+  input[type="datetime-local"],
+  input[type="month"].input-sm,
+  .input-group-sm > input[type="month"].form-control,
+  .input-group-sm > input[type="month"].input-group-addon,
+  .input-group-sm > .input-group-btn > input[type="month"].btn,
+  .input-group-sm
+  input[type="month"]{
+    line-height: 30px;
+  }
+  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
+  .input-group-lg > input[type="date"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="date"].btn,
+  .input-group-lg input[type="date"],
+  input[type="time"].input-lg,
+  .input-group-lg > input[type="time"].form-control,
+  .input-group-lg > input[type="time"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="time"].btn,
+  .input-group-lg
+  input[type="time"],
+  input[type="datetime-local"].input-lg,
+  .input-group-lg > input[type="datetime-local"].form-control,
+  .input-group-lg > input[type="datetime-local"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
+  .input-group-lg
+  input[type="datetime-local"],
+  input[type="month"].input-lg,
+  .input-group-lg > input[type="month"].form-control,
+  .input-group-lg > input[type="month"].input-group-addon,
+  .input-group-lg > .input-group-btn > input[type="month"].btn,
+  .input-group-lg
+  input[type="month"]{
+    line-height: 46px;
   }
 }
 

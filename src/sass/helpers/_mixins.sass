@@ -3,6 +3,10 @@
   @media only screen and (max-width: $width+ "px")
     @content
 
+=rmm($min-width, $max-width)
+  @media only screen and (min-width: $min-width+"px") and (max-width: $max-width+ "px")
+    @content
+
 =rmin($width)
   @media only screen and (min-width: $width+ "px")
     @content
@@ -75,7 +79,7 @@
 =gh($color1, $color2)
   background-image: linear-gradient(left, $color1, $color2)
 
-// font-family 
+// font-family
 =font($alias, $name)
   @font-face
     font-family: $alias
